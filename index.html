@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metalboxes — Boîtes métal personnalisées dès 50 exemplaires, fabrication européenne</title>
+<meta name="description" content="Distributeur français de boîtes métalliques personnalisées pour artisans : café, chocolat, savonnerie, bougies. Dès 50 exemplaires, conformité alimentaire CE 1935/2004, prix transparents, devis sous 48h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --encre:#1E2430;         /* fond sombre : encre d'imprimerie */
+  --encre-2:#2A3242;
+  --papier:#F7F5F0;        /* fond clair : papier d'étiquette */
+  --papier-2:#EFEBE2;
+  --etain:#C9CDD4;         /* gris fer blanc */
+  --etain-clair:#E8EAEE;
+  --vermillon:#B5382F;     /* rouge lithographie vintage */
+  --vermillon-fonce:#93291F;
+  --laiton:#B98A2F;        /* filet doré, avec parcimonie */
+  --texte:#232833;
+  --texte-2:#5A6170;
+  --blanc:#FFFFFF;
+  --radius:14px;
+  --maxw:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{font-family:'Archivo',sans-serif;color:var(--texte);background:var(--papier);line-height:1.6;font-size:16.5px}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.12;font-weight:600}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--vermillon)}
+:focus-visible{outline:3px solid var(--vermillon);outline-offset:2px;border-radius:4px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--papier-2)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Fraunces',serif;font-weight:700;font-size:21px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo-dot{width:22px;height:22px;border-radius:50%;background:
+  radial-gradient(circle at 35% 30%, #fff 0%, var(--etain) 38%, #8A909C 70%, #6B7280 100%);
+  border:2px solid var(--encre);flex:none}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:14.5px;font-weight:500}
+.nav-links a{text-decoration:none;color:var(--texte-2)}
+.nav-links a:hover{color:var(--texte)}
+.btn{display:inline-block;background:var(--vermillon);color:#fff;text-decoration:none;font-weight:600;
+  padding:12px 22px;border-radius:999px;border:none;font-size:15px;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--vermillon-fonce)}
+.btn.ghost{background:transparent;color:var(--texte);border:1.5px solid var(--texte)}
+.btn.ghost:hover{background:var(--encre);color:#fff;border-color:var(--encre)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding:72px 0 84px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(34px,4.6vw,54px);margin:14px 0 18px}
+.hero h1 em{font-style:italic;color:var(--vermillon)}
+.hero p.lede{font-size:19px;color:var(--texte-2);max-width:52ch}
+.hero-ctas{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.hero-notes{display:flex;gap:22px;margin-top:26px;font-size:13.5px;color:var(--texte-2);flex-wrap:wrap}
+.hero-notes span::before{content:"— ";color:var(--laiton)}
+
+/* le couvercle : signature CSS, aucun visuel externe requis */
+.lid-stage{display:flex;justify-content:center}
+.lid{position:relative;width:min(380px,78vw);aspect-ratio:1;border-radius:50%;
+  background:
+    radial-gradient(circle at 32% 28%, #FFFFFF 0%, #E9EBEF 22%, #C9CDD4 45%, #9AA0AC 72%, #7C8290 100%);
+  box-shadow:0 30px 60px -18px rgba(30,36,48,.45), 0 4px 14px rgba(30,36,48,.18);
+  animation:lid-in 1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes lid-in{from{transform:translateY(26px) rotate(-4deg);opacity:0}to{transform:none;opacity:1}}
+.lid::before{content:"";position:absolute;inset:7.5%;border-radius:50%;
+  background:conic-gradient(from 120deg,#8A909C,#E8EAEE 18%,#9AA0AC 34%,#F4F5F7 52%,#8A909C 66%,#DDE0E5 84%,#8A909C);
+  box-shadow:inset 0 2px 8px rgba(255,255,255,.7), inset 0 -6px 14px rgba(30,36,48,.35)}
+.lid::after{content:"";position:absolute;inset:13%;border-radius:50%;background:var(--vermillon);
+  background-image:
+    radial-gradient(circle at 50% 42%, rgba(255,255,255,.16) 0%, transparent 55%),
+    repeating-conic-gradient(from 0deg, transparent 0deg 8deg, rgba(255,255,255,.05) 8deg 16deg);
+  box-shadow:inset 0 4px 16px rgba(0,0,0,.28)}
+.lid-label{position:absolute;inset:13%;border-radius:50%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;color:#fff;text-align:center;z-index:2;padding:12%}
+.lid-label .marque{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(20px,4vw,30px);line-height:1.1}
+.lid-label .filet{width:56%;height:1px;background:linear-gradient(90deg,transparent,var(--laiton),transparent);margin:10px 0}
+.lid-label .sous{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+
+/* ---------- bandeau preuves ---------- */
+.preuves{background:var(--encre);color:var(--etain-clair);padding:34px 0}
+.preuves .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media(max-width:760px){.preuves .wrap{grid-template-columns:1fr;gap:16px}}
+.preuve b{display:block;font-family:'Fraunces',serif;font-size:21px;color:#fff;margin-bottom:4px}
+.preuve span{font-size:14px;color:#A9B0BE}
+
+/* ---------- sections ---------- */
+section{padding:78px 0}
+.sec-head{max-width:640px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px);margin:12px 0 12px}
+.sec-head p{color:var(--texte-2)}
+
+/* verticales */
+.vert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.vert{background:var(--blanc);border:1px solid var(--papier-2);border-radius:var(--radius);padding:22px 20px;transition:transform .15s, box-shadow .15s}
+.vert:hover{transform:translateY(-3px);box-shadow:0 14px 30px -14px rgba(30,36,48,.22)}
+.vert .pastille{width:38px;height:38px;border-radius:50%;margin-bottom:12px;border:2px solid var(--encre);
+  background:radial-gradient(circle at 35% 30%, #fff 0%, var(--etain) 45%, #8A909C 100%)}
+.vert h3{font-size:17.5px;margin-bottom:5px}
+.vert p{font-size:13.8px;color:var(--texte-2)}
+
+/* prix */
+#prix{background:var(--papier-2)}
+.prix-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.prix-card{background:var(--blanc);border-radius:var(--radius);padding:28px 26px;border:1px solid #E4DFD4;position:relative}
+.prix-card.mise-avant{border:2px solid var(--vermillon)}
+.prix-card .badge{position:absolute;top:-12px;left:24px;background:var(--vermillon);color:#fff;font-size:11.5px;
+  font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.prix-card h3{font-size:18px}
+.prix-card .qte{font-size:13px;color:var(--texte-2);margin-bottom:14px}
+.prix-card .val{font-family:'Fraunces',serif;font-size:34px;font-weight:700}
+.prix-card .val small{font-size:15px;font-weight:400;color:var(--texte-2)}
+.prix-card ul{list-style:none;margin-top:16px;font-size:14px;color:var(--texte-2)}
+.prix-card li{padding:5px 0 5px 22px;position:relative}
+.prix-card li::before{content:"●";position:absolute;left:0;color:var(--laiton);font-size:9px;top:11px}
+.prix-note{margin-top:22px;font-size:13.5px;color:var(--texte-2)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;counter-reset:step}
+.step{background:var(--blanc);border:1px solid var(--papier-2);border-radius:var(--radius);padding:24px 22px;counter-increment:step}
+.step::before{content:counter(step,decimal-leading-zero);font-family:'Fraunces',serif;font-size:15px;font-weight:700;
+  color:var(--vermillon);display:block;margin-bottom:10px;letter-spacing:.06em}
+.step h3{font-size:16.5px;margin-bottom:5px}
+.step p{font-size:13.8px;color:var(--texte-2)}
+
+/* à propos */
+#apropos .card{display:flex;gap:26px;align-items:center;background:var(--encre);color:var(--etain-clair);
+  border-radius:var(--radius);padding:34px 32px;flex-wrap:wrap}
+#apropos .avatar{width:76px;height:76px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-weight:700;font-size:26px;color:#fff;background:var(--vermillon);border:3px solid var(--laiton)}
+#apropos p{max-width:62ch;font-size:15.5px}
+#apropos b{color:#fff}
+
+/* formulaire */
+#devis{background:var(--papier-2)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:680px}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:13.5px;font-weight:600}
+input,select,textarea{font-family:inherit;font-size:15px;padding:13px 14px;border:1.5px solid #D8D2C4;
+  border-radius:10px;background:var(--blanc);color:var(--texte)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--vermillon)}
+textarea{resize:vertical;min-height:110px}
+.form-note{grid-column:1/-1;font-size:12.8px;color:var(--texte-2)}
+.form-ok{display:none;background:#E8F3E8;border:1px solid #BFDCBF;color:#2C5F2C;padding:16px 18px;border-radius:10px;margin-top:14px;font-size:14.5px}
+
+/* footer */
+footer{background:var(--encre);color:#A9B0BE;padding:44px 0;font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--etain-clair);text-decoration:none}
+footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="#"><span class="logo-dot" aria-hidden="true"></span>Metalboxes</a>
+    <div class="nav-links">
+      <a href="#verticales">Métiers</a>
+      <a href="#prix">Tarifs</a>
+      <a href="#process">Comment ça marche</a>
+      <a class="btn" href="#devis">Demander un devis</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Emballage métallique personnalisé — France &amp; UE</span>
+      <h1>La boîte métal de <em>votre marque</em>, dès 50 exemplaires.</h1>
+      <p class="lede">Metalboxes fournit aux artisans et marques alimentaires des boîtes en fer blanc personnalisées — sans minimum industriel, avec des prix affichés et une conformité contact alimentaire portée de bout en bout.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#devis">Recevoir un devis sous 48h</a>
+        <a class="btn ghost" href="#prix">Voir les tarifs</a>
+      </div>
+      <div class="hero-notes">
+        <span>Fabrication France &amp; Union européenne</span>
+        <span>Conformité CE 1935/2004</span>
+        <span>Zéro frais de douane surprise</span>
+      </div>
+    </div>
+    <div class="lid-stage" aria-hidden="true">
+      <div class="lid">
+        <div class="lid-label">
+          <div class="marque">Votre marque</div>
+          <div class="filet"></div>
+          <div class="sous">Torréfaction artisanale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="preuves">
+  <div class="wrap">
+    <div class="preuve"><b>Dès 50 exemplaires</b><span>Petites séries en impression numérique, grandes séries en lithographie offset.</span></div>
+    <div class="preuve"><b>Production européenne</b><span>Partenaires certifiés en France et dans l'UE — délais courts, sans friction d'import.</span></div>
+    <div class="preuve"><b>Contact alimentaire garanti</b><span>Conformité CE 1935/2004 documentée : la responsabilité réglementaire est notre travail, pas le vôtre.</span></div>
+  </div>
+</div>
+
+<section id="verticales">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pensé pour votre métier</span>
+      <h2>La boîte qui vend votre produit toute l'année</h2>
+      <p>Un packaging métal réutilisable reste sur l'étagère de vos clients — et y travaille pour votre marque pendant des années.</p>
+    </div>
+    <div class="vert-grid">
+      <div class="vert"><div class="pastille" aria-hidden="true"></div><h3>Torréfacteurs</h3><p>Boîtes hermétiques 250 g / 1 kg, couvercle intérieur, fraîcheur prouvable. Le format des grandes maisons, à votre nom.</p></div>
+      <div class="vert"><div class="pastille" aria-hidden="true"></div><h3>Chocolatiers &amp; confiseurs</h3><p>Formats cadeaux rectangulaires et ronds, éditions saisonnières, décors déclinables par gamme.</p></div>
+      <div class="vert"><div class="pastille" aria-hidden="true"></div><h3>Savonneries &amp; cosmétique solide</h3><p>Boîtes de voyage et écrins pour solides — le contenant durable que votre clientèle attend.</p></div>
+      <div class="vert"><div class="pastille" aria-hidden="true"></div><h3>Ciriers</h3><p>Contenants à bougie prêts à couler, parois adaptées à la chauffe, personnalisation 360°.</p></div>
+      <div class="vert"><div class="pastille" aria-hidden="true"></div><h3>Épices, thés &amp; épicerie fine</h3><p>Séries permanentes multi-références, réassort simple, décors coordonnés à votre gamme.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="prix">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Prix transparents</span>
+      <h2>Des tarifs affichés — une rareté dans le métal</h2>
+      <p>Fourchettes indicatives, boîte standard décorée. Le devis exact dépend du format, du décor et des finitions : vous le recevez sous 48h.</p>
+    </div>
+    <div class="prix-grid">
+      <div class="prix-card">
+        <h3>Petite série</h3><div class="qte">50 à 300 exemplaires — impression numérique</div>
+        <div class="val" data-prix="petite">à partir de 4,50&nbsp;€ <small>/ pièce HT</small></div>
+        <ul><li>Idéal lancements et éditions limitées</li><li>Délai indicatif : 2 à 4 semaines</li><li>Production France / UE</li></ul>
+      </div>
+      <div class="prix-card mise-avant">
+        <span class="badge">Le plus demandé</span>
+        <h3>Série moyenne</h3><div class="qte">300 à 1&nbsp;000 exemplaires</div>
+        <div class="val" data-prix="moyenne">à partir de 2,60&nbsp;€ <small>/ pièce HT</small></div>
+        <ul><li>Le format de croisière des artisans</li><li>Délai indicatif : 4 à 6 semaines</li><li>Décor tout le corps de la boîte</li></ul>
+      </div>
+      <div class="prix-card">
+        <h3>Grande série</h3><div class="qte">1&nbsp;000 exemplaires et plus — lithographie offset</div>
+        <div class="val" data-prix="grande">à partir de 1,40&nbsp;€ <small>/ pièce HT</small></div>
+        <ul><li>Qualité lithographique premium</li><li>Délai indicatif : 8 à 12 semaines</li><li>Embossage et finitions spéciales possibles</li></ul>
+      </div>
+    </div>
+    <p class="prix-note">Tarifs indicatifs hors options (embossage, vernis sélectif, fenêtre). Acompte de 40&nbsp;% à la commande, solde à l'expédition. Échantillon personnalisé à votre logo disponible sur demande.</p>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Comment ça marche</span>
+      <h2>De votre logo à la boîte livrée</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Brief &amp; devis</h3><p>Vous décrivez le produit, la quantité, l'échéance. Devis chiffré sous 48h.</p></div>
+      <div class="step"><h3>Maquette &amp; BAT</h3><p>Nous préparons le fichier d'impression aux normes et vous validez une épreuve avant production.</p></div>
+      <div class="step"><h3>Production suivie</h3><p>Fabrication chez nos partenaires certifiés, contrôle qualité avant expédition.</p></div>
+      <div class="step"><h3>Livraison &amp; réassort</h3><p>Livraison en France, documents de conformité inclus. Le réassort se commande en un email.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="apropos">
+  <div class="wrap">
+    <div class="card">
+      <div class="avatar" aria-hidden="true">FD</div>
+      <p><b>Metalboxes est dirigé par Feres Dkhil</b>, spécialiste de la distribution B2B. Notre métier : rendre accessible aux artisans français ce que seuls les industriels obtenaient — des boîtes métal à leur marque, en quantités raisonnables, avec un interlocuteur français joignable et une conformité alimentaire documentée. <br><br>Une question ? Écrivez à <a href="mailto:contact@metalboxes.fr" style="color:#fff">contact@metalboxes.fr</a> — réponse sous un jour ouvré.</p>
+    </div>
+  </div>
+</section>
+
+<section id="devis">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Devis gratuit</span>
+      <h2>Décrivez votre projet, recevez un chiffrage sous 48h</h2>
+    </div>
+    <form class="form-grid" id="devisForm" method="POST" action="#">
+      <div class="field"><label for="nom">Nom et prénom</label><input id="nom" name="nom" required autocomplete="name"></div>
+      <div class="field"><label for="societe">Société</label><input id="societe" name="societe" required autocomplete="organization"></div>
+      <div class="field"><label for="email">Email professionnel</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="metier">Votre métier</label>
+        <select id="metier" name="metier" required>
+          <option value="">Choisir…</option><option>Torréfacteur</option><option>Chocolatier / confiseur</option>
+          <option>Savonnerie / cosmétique</option><option>Cirier</option><option>Épicerie fine / épices / thé</option><option>Autre</option>
+        </select></div>
+      <div class="field full"><label for="projet">Votre projet (produit, quantité envisagée, échéance)</label>
+        <textarea id="projet" name="projet" required placeholder="Ex. : boîtes 250 g pour notre café de spécialité, ~500 pièces, pour novembre."></textarea></div>
+      <p class="form-note">Vos coordonnées servent uniquement à répondre à votre demande (RGPD). Pas de newsletter sans votre accord.</p>
+      <div class="field full"><button class="btn" type="submit">Envoyer ma demande de devis</button></div>
+    </form>
+    <div class="form-ok" id="formOk">Merci ! Votre demande est bien envoyée — vous recevrez votre chiffrage sous 48h ouvrées à l'adresse indiquée.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="annee"></span> Metalboxes — Emballages métalliques personnalisés<br>contact@metalboxes.fr</div>
+    <div><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></div>
+  </div>
+</footer>
+
+<script>
+/* ====== PRIX RÉVISABLES — mettre à jour après retours RFQ ====== */
+const PRICING = { petite: "4,50", moyenne: "2,60", grande: "1,40" };
+document.querySelectorAll("[data-prix]").forEach(el=>{
+  const k = el.dataset.prix;
+  el.innerHTML = "à partir de " + PRICING[k] + "&nbsp;€ <small>/ pièce HT</small>";
+});
+document.getElementById("annee").textContent = new Date().getFullYear();
+
+/* Formulaire : POST vers ton webhook n8n — remplacer l'URL ci-dessous */
+const WEBHOOK_URL = ""; /* ex: https://n8n.tondomaine.com/webhook/devis-metalboxes */
+document.getElementById("devisForm").addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target).entries());
+  try{
+    if(WEBHOOK_URL){ await fetch(WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)}); }
+    e.target.style.display="none";
+    document.getElementById("formOk").style.display="block";
+  }catch(err){ alert("Une erreur est survenue — écrivez-nous à contact@metalboxes.fr"); }
+});
+</script>
+</body>
+</html>
